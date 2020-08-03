@@ -24,20 +24,26 @@ padding:20px;
 {
 margin-top:50px;
 }
-button
+.b
 {
 margin-top:-110px;
+}
+#r
+{
+position:absolute;
+top: 515px
 }
 </style>
 <body>
 <div>
-<h1>CONVERTING TO MORSECODE(.,-)</h1>
+<h1>CONVERTING TO MORSECODE &nbsp(.,-)</h1>
 <form name="forms">
 <input type="text" id="t" placeholder="enter a string"><br>
 <input type="text" id="y" name="m" placeholder="morsecode"> 
 </form>
-<button onclick="func()">convert</button>
+<button onclick="func()" class="b">convert</button>
 </div>
+<button onclick="myfunc()" id="r">refresh</button>
 <script type="text/javascript">
 function func()
 {
@@ -150,9 +156,13 @@ if(x[i]=="z")
 {
 word+="--.." ;
 }
-
 }
 forms.m.value= word;
+}
+function myfunc()
+{
+document.getElementById("t").value="" ;
+document.getElementById("y").value="" ;
 }
 </script>
 </body>
