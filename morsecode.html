@@ -1,0 +1,159 @@
+<html>
+<head>
+</head>
+<meta charset=""utf-8">
+<style type="text/css">
+ body
+{
+background-color:black;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+div
+{
+padding:20px;
+border:2px dotted white;
+color:white;
+}
+input
+{
+padding:20px;
+}
+#y
+{
+margin-top:50px;
+}
+button
+{
+margin-top:-110px;
+}
+</style>
+<body>
+<div>
+<h1>convertind string to morse code(.,-)</h1>
+<form name="forms">
+<input type="text" id="t" placeholder="enter a string"><br>
+<input type="text" id="y" name="m" placeholder="morsecode"> 
+</form>
+<button onclick="func()">convert</button>
+</div>
+<script type="text/javascript">
+function func()
+{
+var str=document.getElementById("t").value;
+var x=str.split("");
+var word=document.getElementById("y").value;
+for(var i=0 ; i<=x.length ; i++)
+{
+if(x[i]=="a")
+{
+word+=".-" ;
+}
+if(x[i]=="b")
+{
+word+="-...";
+}
+if(x[i]=="c")
+{
+word+="-.-." ;
+}
+if(x[i]=="d")
+{
+word+="-.." ;
+}
+if(x[i]=="e")
+{
+word+="." ;
+}
+if(x[i]=="f")
+{
+word+="..-." ;
+}
+if(x[i]=="g")
+{
+word+="--." ;
+}
+if(x[i]=="h")
+{
+word+="...." ;
+}
+if(x[i]=="i")
+{
+word+=".." ;
+}
+if(x[i]=="j")
+{
+word+=".---" ;
+}
+if(x[i]=="k")
+{
+word+="-.-" ;
+}
+if(x[i]=="l")
+{
+word+=".-.." ;
+}
+if(x[i]=="m")
+{
+word+="--" ;
+}
+if(x[i]=="n")
+{
+word+="-." ;
+}
+if(x[i]=="o")
+{
+word+="---" ;
+}
+if(x[i]=="p")
+{
+word+=".--." ;
+}
+if(x[i]=="q")
+{
+word+="--.-" ;
+}
+if(x[i]=="r")
+{
+word+=".-." ;
+}
+if(x[i]=="s")
+{
+word+="..." ;
+}
+if(x[i]=="")
+{
+word+="-" ;
+}
+if(x[i]=="u")
+{
+word+="..-" ;
+}
+if(x[i]=="v")
+{
+word+="...-" ;
+}
+if(x[i]=="w")
+{
+word+=".--" ;
+}
+if(x[i]=="x")
+{
+word+="-..-" ;
+}
+if(x[i]=="y")
+{
+word+="-.--" ;
+}
+if(x[i]=="z")
+{
+word+="--.." ;
+}
+
+}
+forms.m.value= word;
+}
+</script>
+</body>
+</html>
